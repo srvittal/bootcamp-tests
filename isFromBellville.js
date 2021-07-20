@@ -1,3 +1,3 @@
 function isFromBellville(numPlate) {
-    return numPlate.startsWith('CY');
-  }
+  return numPlate.startsWith('CY');
+}
