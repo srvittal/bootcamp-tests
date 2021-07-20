@@ -1,15 +1,19 @@
 describe('Is from Bellville tests', function () {
 
-    it('Test uses Sudarshan as the numPlate', function () {
-        assert.equal(True, isFromBellville("CY"));
+    it('Test uses CY as the numPlate', function () {
+        assert.equal(true, isFromBellville("CY"));
     });
 
     it('Test uses Jack as the numPlate', function () {
-        assert.deepEqual("Hello, Jack", isFromBellville("Jack"));
+        assert.deepEqual(false, isFromBellville("Jack"));
     });
 
-    it('Test uses Jill as the numPlate', function () {
-        assert.equal("Hello, Jill", isFromBellville("Jill"));
+    it('Test uses CA 123 123 as the numPlate', function () {
+        assert.equal(false, isFromBellville("CA 123 123"));
+    });
+
+    it('Test uses CY 321 321 as the numPlate', function () {
+        assert.equal(true, isFromBellville("CY 321 321"));
     });
 
 });

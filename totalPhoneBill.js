@@ -2,7 +2,7 @@ function totalPhoneBill(usage) {
   var arrUsage = usage.trim().split(/,\s*/);
   var callUsage = [];
   var smsUsage = [];
-  for (i = 0; i < arrUsage.length; i++) {
+  for (var i = 0; i < arrUsage.length; i++) {
     if (arrUsage[i].startsWith('c')) {
       callUsage.push(arrUsage[i]);
     } else if (arrUsage[i].startsWith('s')) {
