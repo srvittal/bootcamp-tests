@@ -12,4 +12,12 @@ describe('Greet tests' , function(){
         assert.equal("Hello, Jill",greet("Jill"));
     });
 
+    it('Test uses Bob as the neighbourName' , function(){
+        assert.equal(greet('Bob'), 'Hello, Bob');
+    });
+
+    it('Test uses Sam as the neighbourName' , function(){
+        assert.equal(greet('Sam'), 'Hello, Sam');
+    });
+
 });
