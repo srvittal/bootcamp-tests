@@ -16,4 +16,8 @@ describe('Years ago tests', function () {
         assert.equal((new Date().getFullYear() - 2000), yearsAgo(2000));
     });
 
+    it('Test uses 1889 as the num', function () {
+        assert.equal((new Date().getFullYear() - 1889), yearsAgo(1889));
+    });
+
 });

@@ -12,4 +12,12 @@ describe('Transport fee tests', function () {
         assert.equal(transportFee('nightshift'), 'free');
     });
 
+    it('Test uses morn as the shift', function () {
+        assert.equal(transportFee('morn'), 'R20');
+    });
+
+    it('Test uses noon as the shift', function () {
+        assert.equal(transportFee('noon'), 'R10');
+    });
+
 });

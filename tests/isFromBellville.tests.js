@@ -20,9 +20,4 @@ describe('Is from Bellville tests', function () {
         assert.equal(isFromBellville('CY 123'), true);
     });
 
-    it('Test uses CJ 123 as the numPlate', function () {
-        assert.equal(isFromBellville('CJ 123'), false);
-
-    });
-
 });
