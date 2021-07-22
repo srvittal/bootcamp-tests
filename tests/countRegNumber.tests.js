@@ -13,7 +13,7 @@ describe('Count reg number tests', function () {
     });
 
     it('Test uses CA 182736 as the regString', function () {
-        assert.equal(countRegNumber('CA 182736'), 3);
+        assert.equal(countRegNumber('CA 182736'), 1);
     });
 
 });

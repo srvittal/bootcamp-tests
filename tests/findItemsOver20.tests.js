@@ -1,7 +1,15 @@
 describe('Find items over 20 tests', function () {
 
-    it('Test uses CY 123 123 as the numPlate & CY as the provCode', function () {
-        assert.equal([], findItemsOver20('1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9,1,2,3,4,5'));
+    it("Test uses [{name : 'apples', qty : 10},{name : 'pears', qty : 37},{name : 'bananas', qty : 27},{name : 'apples', qty : 3}] as the list", function () {
+        assert.deepEqual([{name : 'pears', qty : 37},{name : 'bananas', qty : 27},], findItemsOver20([{name : 'apples', qty : 10},{name : 'pears', qty : 37},{name : 'bananas', qty : 27},{name : 'apples', qty : 3},]));
+    });
+
+    it("Test uses [{name : 'apples', qty : 10},{name : 'pears', qty : 19},{name : 'bananas', qty : 17},{name : 'apples', qty : 3}] as the list", function () {
+        assert.deepEqual([], findItemsOver20([{name : 'apples', qty : 10},{name : 'pears', qty : 19},{name : 'bananas', qty : 17},{name : 'apples', qty : 3},]));
+    });
+
+    it("Test uses [{name : 'apples', qty : 40},{name : 'pears', qty : 20},{name : 'bananas', qty : 23},{name : 'apples', qty : 37}] as the list", function () {
+        assert.deepEqual([{name : 'apples', qty : 40},{name : 'bananas', qty : 23},{name : 'apples', qty : 37}], findItemsOver20([{name : 'apples', qty : 40},{name : 'pears', qty : 20},{name : 'bananas', qty : 23},{name : 'apples', qty : 37}]));
     });
 
 });
