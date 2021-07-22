@@ -48,4 +48,21 @@ describe('Most profitable department tests', function () {
         assert.equal('electronics', mostProfitableDepartment(salesData2));
     });
 
+    it('Test should return Thursday as result', function () {
+        assert.equal('Thursday', mostProfitableDay(salesData));
+    });
+
+    it('Test should return Wednesday as result', function () {
+        assert.equal('Wednesday', mostProfitableDay(salesData2));
+    });
+
+    it('Test should return outdoor and Thursday as result', function () {
+        var depart = mostProfitableDepartment(salesData);
+        var day = mostProfitableDay(salesData);
+        assert.deepEqual(['outdoor','Thursday'], [depart, day]);
+    });
+
+    
+
+
 });
